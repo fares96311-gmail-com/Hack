@@ -1,26 +1,26 @@
 sudo: true
-language: generic
+language: python
 
 matrix:
   include:
     - os: linux
+      python: "3.6"
       sudo: required
       env:
         - TARGET="lint"
       before_script:
-        - pip install --upgrade urllib3
-        - pip install ufolint
+        - pip3 install ufolint
         - sudo apt-get -qq update
         - sudo apt-get install -y shellcheck
       script:
         - make -j $TARGET
     - os: linux
+      python: "3.6"
       sudo: required
       env:
         - TARGET="build-with-dependencies"
       before_script:
-        - pip install --upgrade urllib3
-        - pip install ufolint
+        - pip3 install ufolint
         - sudo apt-get -qq update
         - sudo apt-get install -y shellcheck
       script:
