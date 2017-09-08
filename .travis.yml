@@ -8,7 +8,8 @@ matrix:
       env:
         - TARGET="lint"
       before_script:
-        - pip3 install ufolint
+        - pip install --upgrade urllib3
+        - pip install ufolint
         - sudo apt-get -qq update
         - sudo apt-get install -y shellcheck
       script:
@@ -18,7 +19,8 @@ matrix:
       env:
         - TARGET="build-with-dependencies"
       before_script:
-        - pip3 install ufolint
+        - pip install --upgrade urllib3
+        - pip install ufolint
         - sudo apt-get -qq update
         - sudo apt-get install -y shellcheck
       script:
@@ -32,7 +34,7 @@ matrix:
         - virtualenv env -p python3
         - source env/bin/activate
       before_script:
-        - pip3 install ufolint
+        - pip install ufolint
         - brew install shellcheck
       script:
         - make -j $TARGET
