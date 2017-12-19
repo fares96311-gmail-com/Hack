@@ -22,7 +22,7 @@
       <point x="974" y="43" type="line" smooth="yes"/>
       <point x="907" y="-298"/>
       <point x="771" y="-424"/>
-      <point x="495" y="-424" type="curve" name="ab02" smooth="yes"/>
+      <point x="495" y="-424" type="curve" smooth="yes" name="ab02"/>
       <point x="300" y="-424" type="line"/>
     </contour>
   </outline>

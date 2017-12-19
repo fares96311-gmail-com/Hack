@@ -1,118 +1,437 @@
-# Prefix: Languagesystems
 languagesystem DFLT dflt;
 languagesystem latn dflt;
 languagesystem latn MOL ;
 languagesystem latn ROM ;
 
-# Prefix: Prefix
-@aalt1 = [\zero \one \two \three \four \five \six \seven \eight \nine];
-@subs1 = [\zero.subs \one.subs \two.subs \three.subs \four.subs \five.subs \six.subs \seven.subs \eight.subs \nine.subs];
-@sups1 = [\uni2070 \uni00B9 \uni00B2 \uni00B3 \uni2074 \uni2075 \uni2076 \uni2077 \uni2078 \uni2079];
-# @case1 = [\exclamdown \questiondown \uni2E18 \uni0304 \uni0306 \uni0307 \uni030B \uni030F \uni0311];
-# @case2 = [\exclamdown.case \questiondown.case \uni2E18.case \uni0304.case \uni0306.case \uni0307.case \uni030B.case \uni030F.case \uni0311.case];
 
-feature aalt {
-  feature locl;
-  feature subs;
-  feature sinf;
-  feature sups;
-  feature ordn;
-} aalt;
+# GSUB 
+
+
+lookup loclLocalizedFormsinLatinlookup0 {
+  lookupflag 0;
+    sub \Scedilla by \uni0218 ;
+    sub \scedilla by \uni0219 ;
+} loclLocalizedFormsinLatinlookup0;
+
+lookup loclLocalizedFormsinLatinlookup1 {
+  lookupflag 0;
+    sub \Scedilla by \uni0218 ;
+    sub \scedilla by \uni0219 ;
+} loclLocalizedFormsinLatinlookup1;
+
+lookup subsSubscriptinLatinlookup2 {
+  lookupflag 0;
+    sub \eight by \eight.subs ;
+    sub \five by \five.subs ;
+    sub \four by \four.subs ;
+    sub \nine by \nine.subs ;
+    sub \one by \one.subs ;
+    sub \seven by \seven.subs ;
+    sub \six by \six.subs ;
+    sub \three by \three.subs ;
+    sub \two by \two.subs ;
+    sub \zero by \zero.subs ;
+} subsSubscriptinLatinlookup2;
+
+lookup subsSubscriptinLatinlookup3 {
+  lookupflag 0;
+    sub \eight by \eight.subs ;
+    sub \five by \five.subs ;
+    sub \four by \four.subs ;
+    sub \nine by \nine.subs ;
+    sub \one by \one.subs ;
+    sub \seven by \seven.subs ;
+    sub \six by \six.subs ;
+    sub \three by \three.subs ;
+    sub \two by \two.subs ;
+    sub \zero by \zero.subs ;
+} subsSubscriptinLatinlookup3;
+
+lookup sinfScientificInferiorsinLatinlookup4 {
+  lookupflag 0;
+    sub \eight by \eight.subs ;
+    sub \five by \five.subs ;
+    sub \four by \four.subs ;
+    sub \nine by \nine.subs ;
+    sub \one by \one.subs ;
+    sub \seven by \seven.subs ;
+    sub \six by \six.subs ;
+    sub \three by \three.subs ;
+    sub \two by \two.subs ;
+    sub \zero by \zero.subs ;
+} sinfScientificInferiorsinLatinlookup4;
+
+lookup sinfScientificInferiorsinLatinlookup5 {
+  lookupflag 0;
+    sub \eight by \eight.subs ;
+    sub \five by \five.subs ;
+    sub \four by \four.subs ;
+    sub \nine by \nine.subs ;
+    sub \one by \one.subs ;
+    sub \seven by \seven.subs ;
+    sub \six by \six.subs ;
+    sub \three by \three.subs ;
+    sub \two by \two.subs ;
+    sub \zero by \zero.subs ;
+} sinfScientificInferiorsinLatinlookup5;
+
+lookup supsSuperscriptinLatinlookup6 {
+  lookupflag 0;
+    sub \eight by \uni2078 ;
+    sub \five by \uni2075 ;
+    sub \four by \uni2074 ;
+    sub \nine by \uni2079 ;
+    sub \one by \uni00B9 ;
+    sub \seven by \uni2077 ;
+    sub \six by \uni2076 ;
+    sub \three by \uni00B3 ;
+    sub \two by \uni00B2 ;
+    sub \zero by \uni2070 ;
+} supsSuperscriptinLatinlookup6;
+
+lookup supsSuperscriptinLatinlookup7 {
+  lookupflag 0;
+    sub \eight by \uni2078 ;
+    sub \five by \uni2075 ;
+    sub \four by \uni2074 ;
+    sub \nine by \uni2079 ;
+    sub \one by \uni00B9 ;
+    sub \seven by \uni2077 ;
+    sub \six by \uni2076 ;
+    sub \three by \uni00B3 ;
+    sub \two by \uni00B2 ;
+    sub \zero by \uni2070 ;
+} supsSuperscriptinLatinlookup7;
+
+lookup fracDiagonalFractionsinLatinlookup8 {
+  lookupflag 0;
+    sub \five \slash \eight  by \fiveeighths;
+    sub \one \slash \eight  by \oneeighth;
+    sub \one \slash \two  by \onehalf;
+    sub \one \slash \four  by \onequarter;
+    sub \seven \slash \eight  by \seveneighths;
+    sub \three \slash \eight  by \threeeighths;
+    sub \three \slash \four  by \threequarters;
+    sub \one \slash \three  by \uni2153;
+    sub \two \slash \three  by \uni2154;
+    sub \one \slash \five  by \uni2155;
+    sub \three \slash \five  by \uni2157;
+    sub \four \slash \five  by \uni2158;
+    sub \one \slash \six  by \uni2159;
+    sub \five \slash \six  by \uni215A;
+} fracDiagonalFractionsinLatinlookup8;
+
+lookup fracDiagonalFractionsinLatinlookup9 {
+  lookupflag 0;
+    sub \five \slash \eight  by \fiveeighths;
+    sub \one \slash \eight  by \oneeighth;
+    sub \one \slash \two  by \onehalf;
+    sub \one \slash \four  by \onequarter;
+    sub \seven \slash \eight  by \seveneighths;
+    sub \three \slash \eight  by \threeeighths;
+    sub \three \slash \four  by \threequarters;
+    sub \one \slash \three  by \uni2153;
+    sub \two \slash \three  by \uni2154;
+    sub \one \slash \five  by \uni2155;
+    sub \three \slash \five  by \uni2157;
+    sub \four \slash \five  by \uni2158;
+    sub \one \slash \six  by \uni2159;
+    sub \five \slash \six  by \uni215A;
+} fracDiagonalFractionsinLatinlookup9;
+
+lookup ordnOrdinalsinLatinlookup10 {
+  lookupflag 0;
+    sub [\zero \one \two \three \four \five \six \seven \eight \nine ] [\A \a ]'  by [\ordfeminine \ordfeminine ];
+    sub [\zero \one \two \three \four \five \six \seven \eight \nine ] [\O \o ]'  by [\ordmasculine \ordmasculine ];
+} ordnOrdinalsinLatinlookup10;
+
+lookup ordnOrdinalsinLatinlookup13 {
+  lookupflag 0;
+    sub [\zero \one \two \three \four \five \six \seven \eight \nine ] [\A \a ]'  by [\ordfeminine \ordfeminine ];
+    sub [\zero \one \two \three \four \five \six \seven \eight \nine ] [\O \o ]'  by [\ordmasculine \ordmasculine ];
+} ordnOrdinalsinLatinlookup13;
 
 feature locl {
- # Localized Forms
- script latn; # Latin
- language MOL  exclude_dflt; # Moldavian
-    sub [Scedilla scedilla] by [uni0218 uni0219];
- language ROM  exclude_dflt; # Romanian
-    sub [Scedilla scedilla] by [uni0218 uni0219];
+
+ script latn;
+     language MOL  exclude_dflt;
+      lookup loclLocalizedFormsinLatinlookup0;
+     language ROM  exclude_dflt;
+      lookup loclLocalizedFormsinLatinlookup1;
 } locl;
 
 feature subs {
- # Subscript
- # DEFAULT
-    sub @aalt1 by @subs1;
- script latn; # Latin
-    sub @aalt1 by @subs1;
- language MOL ; # Moldavian
- language ROM ; # Romanian
+
+ script DFLT;
+     language dflt ;
+      lookup subsSubscriptinLatinlookup2;
+
+ script latn;
+     language dflt ;
+      lookup subsSubscriptinLatinlookup2;
+      lookup subsSubscriptinLatinlookup3;
+     language MOL  exclude_dflt;
+      lookup subsSubscriptinLatinlookup2;
+     language ROM  exclude_dflt;
+      lookup subsSubscriptinLatinlookup2;
 } subs;
 
 feature sinf {
- # Scientific Inferiors
- # DEFAULT
-    sub @aalt1 by @subs1;
- script latn; # Latin
-    sub @aalt1 by @subs1;
- language MOL ; # Moldavian
- language ROM ; # Romanian
+
+ script DFLT;
+     language dflt ;
+      lookup sinfScientificInferiorsinLatinlookup4;
+
+ script latn;
+     language dflt ;
+      lookup sinfScientificInferiorsinLatinlookup4;
+      lookup sinfScientificInferiorsinLatinlookup5;
+     language MOL  exclude_dflt;
+      lookup sinfScientificInferiorsinLatinlookup4;
+     language ROM  exclude_dflt;
+      lookup sinfScientificInferiorsinLatinlookup4;
 } sinf;
 
 feature sups {
- # Superscript
- # DEFAULT
-    sub @aalt1 by @sups1;
- script latn; # Latin
-    sub @aalt1 by @sups1;
- language MOL ; # Moldavian
- language ROM ; # Romanian
+
+ script DFLT;
+     language dflt ;
+      lookup supsSuperscriptinLatinlookup6;
+
+ script latn;
+     language dflt ;
+      lookup supsSuperscriptinLatinlookup6;
+      lookup supsSuperscriptinLatinlookup7;
+     language MOL  exclude_dflt;
+      lookup supsSuperscriptinLatinlookup6;
+     language ROM  exclude_dflt;
+      lookup supsSuperscriptinLatinlookup6;
 } sups;
 
 feature frac {
- # Fractions
- # DEFAULT
-    sub one slash two by onehalf;
-    sub one slash three by uni2153;
-    sub one slash four by onequarter;
-    sub one slash five by uni2155;
-    sub one slash six by uni2159;
-    sub one slash eight by oneeighth;
-    sub two slash three by uni2154;
-    sub three slash four by threequarters;
-    sub three slash five by uni2157;
-    sub three slash eight by threeeighths;
-    sub four slash five by uni2158;
-    sub five slash six by uni215A;
-    sub five slash eight by fiveeighths;
-    sub seven slash eight by seveneighths;
- script latn; # Latin
-    sub one slash two by onehalf;
-    sub one slash three by uni2153;
-    sub one slash four by onequarter;
-    sub one slash five by uni2155;
-    sub one slash six by uni2159;
-    sub one slash eight by oneeighth;
-    sub two slash three by uni2154;
-    sub three slash four by threequarters;
-    sub three slash five by uni2157;
-    sub three slash eight by threeeighths;
-    sub four slash five by uni2158;
-    sub five slash six by uni215A;
-    sub five slash eight by fiveeighths;
-    sub seven slash eight by seveneighths;
- language MOL ; # Moldavian
- language ROM ; # Romanian
+
+ script DFLT;
+     language dflt ;
+      lookup fracDiagonalFractionsinLatinlookup8;
+
+ script latn;
+     language dflt ;
+      lookup fracDiagonalFractionsinLatinlookup8;
+      lookup fracDiagonalFractionsinLatinlookup9;
+     language MOL  exclude_dflt;
+      lookup fracDiagonalFractionsinLatinlookup8;
+     language ROM  exclude_dflt;
+      lookup fracDiagonalFractionsinLatinlookup8;
 } frac;
 
 feature ordn {
- # Ordinals
- # DEFAULT
-    sub @aalt1 [A a]' by [ordfeminine ordfeminine];
-    sub @aalt1 [O o]' by [ordmasculine ordmasculine];
- script latn; # Latin
-    sub @aalt1 [A a]' by [ordfeminine ordfeminine];
-    sub @aalt1 [O o]' by [ordmasculine ordmasculine];
- language MOL ; # Moldavian
- language ROM ; # Romanian
+
+ script DFLT;
+     language dflt ;
+      lookup ordnOrdinalsinLatinlookup10;
+
+ script latn;
+     language dflt ;
+      lookup ordnOrdinalsinLatinlookup10;
+      lookup ordnOrdinalsinLatinlookup13;
+     language MOL  exclude_dflt;
+      lookup ordnOrdinalsinLatinlookup10;
+     language ROM  exclude_dflt;
+      lookup ordnOrdinalsinLatinlookup10;
 } ordn;
 
-#feature case {
-# # Case-Sensitive Forms
-# # DEFAULT
-#    sub @case1 by @case2;
-# script latn; # Latin
-#    sub @case1 by @case2;
-# language MOL ; # Moldavian
-# language ROM ; # Romanian
-#} case;
+@GDEF_Simple = [\A \AE \Aacute \Abreve \Acircumflex \Adieresis \Agrave \Alpha 
+	\Alphatonos \Amacron \Aogonek \Aring \Atilde \B \Beta \C \CR \Cacute \Ccaron 
+	\Ccedilla \Ccircumflex \Cdotaccent \Chi \D \Dcaron \Dcroat \E \Eacute \Ecaron 
+	\Ecircumflex \Edieresis \Edotaccent \Egrave \Emacron \Eng \Eogonek \Epsilon 
+	\Epsilontonos \Eta \Etatonos \Eth \Euro \F \G \Gamma \Gbreve \Gcaron \Gcircumflex 
+	\Gdotaccent \H \Hbar \Hcircumflex \I \IJ \Iacute \Icircumflex \Idieresis 
+	\Idotaccent \Igrave \Imacron \Iogonek \Iota \Iotadieresis \Iotatonos \Itilde \J 
+	\Jcircumflex \K \Kappa \L \Lacute \Lambda \Lcaron \Ldot \Lslash \M \Mu \N \NULL 
+	\Nacute \Ncaron \Ntilde \Nu \O \OE \Oacute \Ocircumflex \Odieresis \Ograve \Ohorn 
+	\Ohungarumlaut \Omacron \Omegatonos \Omicron \Omicrontonos \Oslash 
+	\Oslashacute \Otilde \P \Phi \Pi \Psi \Q \R \Racute \Rcaron \Rho \S \Sacute \Scaron 
+	\Scedilla \Scircumflex \Sigma \T \Tau \Tbar \Tcaron \Theta \Thorn \U \Uacute 
+	\Ubreve \Ucircumflex \Udieresis \Ugrave \Uhorn \Uhungarumlaut \Umacron \Uogonek 
+	\Upsilon \Upsilondieresis \Upsilontonos \Uring \Utilde \V \W \Wacute 
+	\Wcircumflex \Wdieresis \Wgrave \X \Xi \Y \Yacute \Ycircumflex \Ydieresis \Ygrave 
+	\Z \Zacute \Zcaron \Zdotaccent \Zeta \_1608 \a \aacute \abreve \acircumflex \acute 
+	\acutecomb \adieresis \ae \agrave \alpha \alphatonos \amacron \ampersand \angle 
+	\aogonek \approxequal \aring \arrowboth \arrowdblboth \arrowdbldown 
+	\arrowdblleft \arrowdblright \arrowdblup \arrowdown \arrowleft \arrowright 
+	\arrowup \arrowupdn \arrowupdnbse \asciicircum \asciitilde \asterisk 
+	\asteriskmath \at \atilde \b \backslash \bar \beta \block \braceleft \braceright 
+	\bracketleft \bracketright \breve \brokenbar \bullet \c \c6459 \c6460 \c6461 
+	\c6468 \c6470 \c6472 \c6475 \c6476 \c6477 \c6478 \cacute \caron \carriagereturn 
+	\ccaron \ccedilla \ccircumflex \cdotaccent \cedilla \cent \chi \circle 
+	\circlemultiply \circleplus \circumflex \colon \colonmonetary \comma 
+	\congruent \copyright \currency \d \dagger \daggerdbl \dcaron \dcroat \degree 
+	\delta \dieresis \dieresistonos \divide \dkshade \dnblock \dollar \dong 
+	\dotaccent \dotbelowcomb \dotlessi \dotmath \e \eacute \ecaron \ecircumflex 
+	\edieresis \edotaccent \egrave \eight \eight.subs \element \ellipsis \emacron 
+	\Ebreve \ebreve \emdash \emptyset \endash \eng \eogonek \epsilon \epsilontonos 
+	\equal \equivalence \eta \etatonos \eth \exclam \exclamdbl \exclamdown 
+	\exclamdown.case \existential \f \figuredash \filledbox \filledrect \five 
+	\five.subs \florin \four \four.subs \fraction \franc \g \gamma \gbreve \gcaron 
+	\gcircumflex \gdotaccent \germandbls \gradient \grave \gravecomb \greater 
+	\greaterequal \guillemotleft \guillemotright \guilsinglleft \guilsinglright 
+	\h \hbar \hcircumflex \hookabovecomb \hungarumlaut \hyphen \i \iacute 
+	\icircumflex \idieresis \igrave \ij \imacron \Ibreve \ibreve \infinity \integral 
+	\integralbt \integraltp \intersection \invbullet \invcircle \iogonek \iota 
+	\iotadieresis \iotadieresistonos \iotatonos \itilde \j \jcircumflex \k \kappa 
+	\kgreenlandic \l \lacute \lambda \lcaron \ldot \less \lessequal \lfblock \lira 
+	\logicaland \logicalnot \logicalor \lozenge \lslash \ltshade \m \macron \minus 
+	\multiply \musicalnote \n \nacute \napostrophe \ncaron \nine \nine.subs 
+	\notelement \notequal \notsubset \ntilde \nu \numbersign \o \oacute \ocircumflex 
+	\odieresis \oe \ogonek \ograve \ohorn \ohungarumlaut \omacron \Obreve \obreve 
+	\omega \omegatonos \omicron \omicrontonos \one \one.subs \openbullet 
+	\ordfeminine \ordmasculine \orthogonal \oslash \oslashacute \otilde \p 
+	\paragraph \parenleft \parenright \partialdiff \percent \period 
+	\periodcentered \perthousand \peseta \phi \pi \plus \plusminus \product 
+	\propersubset \propersuperset \proportional \psi \q \question \questiondown 
+	\questiondown.case \quotedbl \quotedblbase \quotedblleft \quotedblright 
+	\quoteleft \quotereversed \quoteright \quotesinglbase \quotesingle \r \racute 
+	\radical \rcaron \reflexsubset \reflexsuperset \registered \revlogicalnot \rho 
+	\ring \rtblock \s \sacute \scaron \scedilla \scircumflex \section \semicolon 
+	\seven \seven.subs \shade \sigma \similar \six \six.subs \slash \space \sterling 
+	\suchthat \summation \t \tau \tbar \tcaron \therefore \theta \thorn \three 
+	\three.subs \tilde \tildecomb \tonos \trademark \triagdn \triaglf \triagrt 
+	\triagup \two \two.subs \u \uacute \ubreve \ucircumflex \udieresis \ugrave \uhorn 
+	\uhungarumlaut \umacron \underscore \underscoredbl \uni00A0 \uni00AD \uni00B2 
+	\uni00B3 \uni00B5 \uni00B9 \uni0122 \uni0123 \uni0136 \uni0137 \uni013B \uni013C 
+	\uni0145 \uni0146 \uni0156 \uni0157 \uni0162 \uni0163 \uni01A4 \uni0218 \uni0219 
+	\uni021A \uni021B \uni02B9 \uni02BB \uni02BC \uni02BD \uni02BE \uni02BF \uni02C0 
+	\uni02C1 \uni02C8 \uni02C9 \uni02CC \uni02CD \uni02CE \uni02CF \uni02D0 \uni02D1 
+	\uni0302 \uni0304 \uni0304.case \uni0305 \uni0306 \uni0306.case \uni0307 
+	\uni0307.case \uni0308 \uni030A \uni030B \uni030B.case \uni030C \uni030D 
+	\uni030E \uni030F \uni030F.case \uni0310 \uni0311 \uni0311.case \uni0312 
+	\uni0313 \uni0314 \uni0315 \uni0316 \uni0317 \uni0318 \uni0319 \uni031A \uni031B 
+	\uni031C \uni031D \uni031E \uni031F \uni0320 \uni0321 \uni0322 \uni0324 \uni0325 
+	\uni0326 \uni0327 \uni0328 \uni0329 \uni032A \uni032B \uni032C \uni032D \uni032E 
+	\uni032F \uni0330 \uni0331 \uni0332 \uni0333 \uni0334 \uni0335 \uni0336 \uni0337 
+	\uni0338 \uni0339 \uni033A \uni033B \uni033C \uni033D \uni033E \uni033F \uni0358 
+	\uni0361 \uni0394 \uni03A9 \uni03BC \uni03C2 \uni03F4 \uni0400 \uni0401 \uni0402 
+	\uni0403 \uni0404 \uni0405 \uni0406 \uni0407 \uni0408 \uni0409 \uni040A \uni040B 
+	\uni040C \uni040D \uni040E \uni040F \uni0410 \uni0411 \uni0412 \uni0413 \uni0414 
+	\uni0415 \uni0416 \uni0417 \uni0418 \uni0419 \uni041A \uni041B \uni041C \uni041D 
+	\uni041E \uni041F \uni0420 \uni0421 \uni0422 \uni0423 \uni0424 \uni0425 \uni0426 
+	\uni0427 \uni0428 \uni0429 \uni042A \uni042B \uni042C \uni042D \uni042E \uni042F 
+	\uni0430 \uni0431 \uni0432 \uni0433 \uni0434 \uni0435 \uni0436 \uni0437 \uni0438 
+	\uni0439 \uni043A \uni043B \uni043C \uni043D \uni043E \uni043F \uni0440 \uni0441 
+	\uni0442 \uni0443 \uni0444 \uni0445 \uni0446 \uni0447 \uni0448 \uni0449 \uni044A 
+	\uni044B \uni044C \uni044D \uni044E \uni044F \uni0450 \uni0451 \uni0452 \uni0453 
+	\uni0454 \uni0455 \uni0456 \uni0457 \uni0458 \uni0459 \uni045A \uni045B \uni045C 
+	\uni045D \uni045E \uni045F \uni0462 \uni0463 \uni0472 \uni0473 \uni0490 \uni0491 
+	\uni0492 \uni0493 \uni0494 \uni0495 \uni0496 \uni0497 \uni0498 \uni0499 \uni049A 
+	\uni049B \uni04A2 \uni04A3 \uni04A4 \uni04A5 \uni04AA \uni04AB \uni04AC \uni04AD 
+	\uni04AE \uni04AF \uni04B0 \uni04B1 \uni04B2 \uni04B3 \uni04BA \uni04BB \uni04C0 
+	\uni04C1 \uni04C2 \uni04C3 \uni04C4 \uni04C7 \uni04C8 \uni04CB \uni04CC \uni04CF 
+	\uni04D0 \uni04D1 \uni04D2 \uni04D3 \uni04D4 \uni04D5 \uni04D6 \uni04D7 \uni04D8 
+	\uni04D9 \uni04DA \uni04DB \uni04DC \uni04DD \uni04DE \uni04DF \uni04E0 \uni04E1 
+	\uni04E2 \uni04E3 \uni04E4 \uni04E5 \uni04E6 \uni04E7 \uni04E8 \uni04E9 \uni04EA 
+	\uni04EB \uni04EC \uni04ED \uni04EE \uni04EF \uni04F0 \uni04F1 \uni04F2 \uni04F3 
+	\uni04F4 \uni04F5 \uni04F6 \uni04F7 \uni04F8 \uni04F9 \uni0510 \uni0511 \uni051A 
+	\uni051B \uni051C \uni051D \uni0531 \uni0532 \uni0533 \uni0534 \uni0535 \uni0536 
+	\uni0537 \uni0538 \uni0539 \uni053A \uni053B \uni053C \uni053D \uni053E \uni053F 
+	\uni0540 \uni0541 \uni0542 \uni0543 \uni0544 \uni0545 \uni0546 \uni0547 \uni0548 
+	\uni0549 \uni054A \uni054B \uni054C \uni054D \uni054E \uni054F \uni0550 \uni0551 
+	\uni0552 \uni0553 \uni0554 \uni0555 \uni0556 \uni0559 \uni055A \uni055B \uni055C 
+	\uni055D \uni055E \uni055F \uni0561 \uni0562 \uni0563 \uni0564 \uni0565 \uni0566 
+	\uni0567 \uni0568 \uni0569 \uni056A \uni056B \uni056C \uni056D \uni056E \uni056F 
+	\uni0570 \uni0571 \uni0572 \uni0573 \uni0574 \uni0575 \uni0576 \uni0577 \uni0578 
+	\uni0579 \uni057A \uni057B \uni057C \uni057D \uni057E \uni057F \uni0580 \uni0581 
+	\uni0582 \uni0583 \uni0584 \uni0585 \uni0586 \uni0587 \uni0589 \uni058A \uni0E3F 
+	\uni10D0 \uni10D1 \uni10D2 \uni10D3 \uni10D4 \uni10D5 \uni10D6 \uni10D7 \uni10D8 
+	\uni10D9 \uni10DA \uni10DB \uni10DC \uni10DD \uni10DE \uni10DF \uni10E0 \uni10E1 
+	\uni10E2 \uni10E3 \uni10E4 \uni10E5 \uni10E6 \uni10E7 \uni10E8 \uni10E9 \uni10EA 
+	\uni10EB \uni10EC \uni10ED \uni10EE \uni10EF \uni10F0 \uni10F1 \uni10F2 \uni10F3 
+	\uni10F4 \uni10F5 \uni10F6 \uni10F7 \uni10F8 \uni10F9 \uni10FA \uni10FB \uni10FC 
+	\uni1EBC \uni1EBD \uni1EF8 \uni1EF9 \uni2000 \uni2001 \uni2002 \uni2003 \uni2004 
+	\uni2005 \uni2006 \uni2007 \uni2008 \uni2009 \uni200A \uni2010 \uni2011 \uni2015 
+	\uni2016 \uni201F \uni2023 \uni202F \uni2031 \uni2034 \uni2035 \uni2036 \uni2037 
+	\uni203D \uni203E \uni203F \uni2045 \uni2046 \uni2047 \uni2048 \uni2049 \uni204B 
+	\uni205F \uni2070 \uni2074 \uni2075 \uni2076 \uni2077 \uni2078 \uni2079 \uni207A 
+	\uni207B \uni207C \uni207D \uni207E \uni208A \uni208B \uni208C \uni208D \uni208E 
+	\uni20A0 \uni20A2 \uni20A5 \uni20A6 \uni20A8 \uni20A9 \uni20AA \uni20AD \uni20AE 
+	\uni20AF \uni20B0 \uni20B1 \uni20B2 \uni20B3 \uni20B4 \uni20B5 \uni20B7 \uni20B8 
+	\uni20B9 \uni2116 \uni2126 \uni2150 \uni2151 \uni2156 \uni215F \uni2189 \uni2196 
+	\uni2197 \uni2198 \uni2199 \uni219A \uni219B \uni219C \uni219D \uni219E \uni219F 
+	\uni21A0 \uni21A1 \uni21A2 \uni21A3 \uni21A4 \uni21A5 \uni21A6 \uni21A7 \uni21A9 
+	\uni21AA \uni21AB \uni21AC \uni21AD \uni21AE \uni21AF \uni21B0 \uni21B1 \uni21B2 
+	\uni21B3 \uni21B4 \uni21B6 \uni21B7 \uni21B8 \uni21B9 \uni21BA \uni21BB \uni21BC 
+	\uni21BD \uni21BE \uni21BF \uni21C0 \uni21C1 \uni21C2 \uni21C3 \uni21C4 \uni21C5 
+	\uni21C6 \uni21C7 \uni21C8 \uni21C9 \uni21CA \uni21CB \uni21CC \uni21CD \uni21CE 
+	\uni21CF \uni21D5 \uni21D6 \uni21D7 \uni21D8 \uni21D9 \uni21DA \uni21DB \uni21DC 
+	\uni21DD \uni21E0 \uni21E1 \uni21E2 \uni21E3 \uni21E4 \uni21E5 \uni21E6 \uni21E7 
+	\uni21E8 \uni21E9 \uni21EB \uni21EC \uni21ED \uni21EE \uni21EF \uni21F0 \uni21F1 
+	\uni21F2 \uni21F3 \uni21F4 \uni21F5 \uni21F6 \uni21F7 \uni21F8 \uni21F9 \uni21FA 
+	\uni21FB \uni21FC \uni21FD \uni21FE \uni21FF \uni2201 \uni2204 \uni2206 \uni220A 
+	\uni220C \uni220D \uni220E \uni2210 \uni2213 \uni2218 \uni221B \uni221C \uni2223 
+	\uni222C \uni222D \uni2235 \uni2236 \uni2237 \uni2238 \uni2239 \uni223A \uni223B 
+	\uni223D \uni2241 \uni2242 \uni2243 \uni2244 \uni2246 \uni2247 \uni2249 \uni224A 
+	\uni224B \uni224C \uni224D \uni224E \uni224F \uni2250 \uni2251 \uni2252 \uni2253 
+	\uni2254 \uni2255 \uni2256 \uni2257 \uni2258 \uni2259 \uni225A \uni225B \uni225C 
+	\uni225D \uni225E \uni225F \uni2262 \uni2263 \uni2266 \uni2267 \uni2268 \uni2269 
+	\uni226D \uni226E \uni226F \uni2270 \uni2271 \uni2272 \uni2273 \uni2274 \uni2275 
+	\uni2276 \uni2277 \uni2278 \uni2279 \uni227A \uni227B \uni227C \uni227D \uni227E 
+	\uni227F \uni2280 \uni2281 \uni2285 \uni2288 \uni2289 \uni228A \uni228B \uni228D 
+	\uni228E \uni228F \uni2290 \uni2291 \uni2292 \uni2293 \uni2294 \uni2296 \uni2298 
+	\uni2299 \uni229A \uni229B \uni229C \uni229D \uni229E \uni229F \uni22A0 \uni22A1 
+	\uni22A2 \uni22A3 \uni22A4 \uni22B2 \uni22B3 \uni22B4 \uni22B5 \uni22B8 \uni22C2 
+	\uni22C3 \uni22C4 \uni22C6 \uni22CD \uni22CE \uni22CF \uni22D0 \uni22D1 \uni22DA 
+	\uni22DB \uni22DC \uni22DD \uni22DE \uni22DF \uni22E0 \uni22E1 \uni22E2 \uni22E3 
+	\uni22E4 \uni22E5 \uni22E6 \uni22E7 \uni22E8 \uni22E9 \uni22EF \uni2304 \uni2308 
+	\uni2309 \uni230A \uni230B \uni239B \uni239C \uni239D \uni239E \uni239F \uni23A0 
+	\uni23A1 \uni23A2 \uni23A3 \uni23A4 \uni23A5 \uni23A6 \uni23A7 \uni23A8 \uni23A9 
+	\uni23AA \uni23AB \uni23AC \uni23AD \uni23AE \uni2500 \uni2501 \uni2502 \uni2503 
+	\uni2504 \uni2505 \uni2506 \uni2507 \uni2508 \uni2509 \uni250A \uni250B \uni250C 
+	\uni250D \uni250E \uni250F \uni2510 \uni2511 \uni2512 \uni2513 \uni2514 \uni2515 
+	\uni2516 \uni2517 \uni2518 \uni2519 \uni251A \uni251B \uni251C \uni251D \uni251E 
+	\uni251F \uni2520 \uni2521 \uni2522 \uni2523 \uni2524 \uni2525 \uni2526 \uni2527 
+	\uni2528 \uni2529 \uni252A \uni252B \uni252C \uni252D \uni252E \uni252F \uni2530 
+	\uni2531 \uni2532 \uni2533 \uni2534 \uni2535 \uni2536 \uni2537 \uni2538 \uni2539 
+	\uni253A \uni253B \uni253C \uni253D \uni253E \uni253F \uni2540 \uni2541 \uni2542 
+	\uni2543 \uni2544 \uni2545 \uni2546 \uni2547 \uni2548 \uni2549 \uni254A \uni254B 
+	\uni254C \uni254D \uni254E \uni254F \uni2550 \uni2551 \uni2552 \uni2553 \uni2554 
+	\uni2555 \uni2556 \uni2557 \uni2558 \uni2559 \uni255A \uni255B \uni255C \uni255D 
+	\uni255E \uni255F \uni2560 \uni2561 \uni2562 \uni2563 \uni2564 \uni2565 \uni2566 
+	\uni2567 \uni2568 \uni2569 \uni256A \uni256B \uni256C \uni256D \uni256E \uni256F 
+	\uni2570 \uni2571 \uni2572 \uni2573 \uni2574 \uni2575 \uni2576 \uni2577 \uni2578 
+	\uni2579 \uni257A \uni257B \uni257C \uni257D \uni257E \uni257F \uni2581 \uni2582 
+	\uni2583 \uni2585 \uni2586 \uni2587 \uni2589 \uni258A \uni258B \uni258D \uni258E 
+	\uni258F \uni2594 \uni2595 \uni2596 \uni2597 \uni2598 \uni2599 \uni259A \uni259B 
+	\uni259C \uni259D \uni259E \uni259F \uni25A1 \uni25A2 \uni25A3 \uni25A4 \uni25A5 
+	\uni25A6 \uni25A7 \uni25A8 \uni25A9 \uni25AA \uni25AB \uni25AD \uni25AE \uni25AF 
+	\uni25B0 \uni25B1 \uni25B3 \uni25B4 \uni25B5 \uni25B6 \uni25B7 \uni25B8 \uni25B9 
+	\uni25BB \uni25BD \uni25BE \uni25BF \uni25C0 \uni25C1 \uni25C2 \uni25C3 \uni25C5 
+	\uni25C6 \uni25C7 \uni25C8 \uni25C9 \uni25CC \uni25CD \uni25CE \uni25CF \uni25D0 
+	\uni25D1 \uni25D2 \uni25D3 \uni25D4 \uni25D5 \uni25D6 \uni25D7 \uni25DA \uni25DB 
+	\uni25DC \uni25DD \uni25DE \uni25DF \uni25E0 \uni25E1 \uni25E2 \uni25E3 \uni25E4 
+	\uni25E5 \uni25E7 \uni25E8 \uni25E9 \uni25EA \uni25EB \uni25EC \uni25ED \uni25EE 
+	\uni25EF \uni25F0 \uni25F1 \uni25F2 \uni25F3 \uni25F4 \uni25F5 \uni25F6 \uni25F7 
+	\uni25F8 \uni25F9 \uni25FA \uni25FB \uni25FC \uni25FD \uni25FE \uni25FF \uni2756 
+	\uni2768 \uni2769 \uni276A \uni276B \uni276C \uni276D \uni276E \uni276F \uni2770 
+	\uni2771 \uni2772 \uni2773 \uni2774 \uni2775 \uni2794 \uni2798 \uni2799 \uni279A 
+	\uni279B \uni279C \uni279D \uni279E \uni279F \uni27A0 \uni27A1 \uni27A2 \uni27A3 
+	\uni27A4 \uni27A5 \uni27A6 \uni27A7 \uni27A8 \uni27A9 \uni27AA \uni27AB \uni27AC 
+	\uni27AD \uni27AE \uni27AF \uni27B1 \uni27B2 \uni27B3 \uni27B4 \uni27B5 \uni27B6 
+	\uni27B7 \uni27B8 \uni27B9 \uni27BA \uni27BB \uni27BC \uni27BD \uni27BE \uni27C2 
+	\uni27C5 \uni27C6 \uni27DC \uni27E0 \uni27E6 \uni27E7 \uni27E8 \uni27E9 \uni27EA 
+	\uni27EB \uni27F5 \uni27F6 \uni27F7 \uni2987 \uni2988 \uni2997 \uni2998 \uni29EB 
+	\uni29FA \uni29FB \uni2A00 \uni2A2F \uni2A6A \uni2A6B \uni2B05 \uni2B06 \uni2B07 
+	\uni2B08 \uni2B09 \uni2B0A \uni2B0B \uni2B0C \uni2B0D \uni2B16 \uni2B17 \uni2B18 
+	\uni2B19 \uni2B1A \uni2C7D \uni2E18 \uni2E18.case \uni2E1F \uni2E22 \uni2E23 
+	\uni2E24 \uni2E25 \uni2E2E \uniE0A0 \uniE0A1 \uniE0A2 \uniE0B0 \uniE0B1 \uniE0B2 
+	\uniE0B3 \uniFEFF \union \universal \uogonek \upblock \upsilon \upsilondieresis 
+	\upsilondieresistonos \upsilontonos \uring \utilde \v \w \wacute \wcircumflex 
+	\wdieresis \wgrave \x \xi \y \yacute \ycircumflex \ydieresis \yen \ygrave \z 
+	\zacute \zcaron \zdotaccent \zero \zero.subs \zeta ];
+@GDEF_Ligature = [\fiveeighths \oneeighth \onehalf \onequarter \seveneighths 
+	\threeeighths \threequarters \uni2153 \uni2154 \uni2155 \uni2157 \uni2158 
+	\uni2159 \uni215A ];
+
+table GDEF {
+  GlyphClassDef @GDEF_Simple, @GDEF_Ligature, , ;
+
+} GDEF;
 

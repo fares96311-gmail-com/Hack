@@ -30,7 +30,7 @@
       <point x="228" y="1026" type="curve" smooth="yes"/>
       <point x="279" y="1026"/>
       <point x="336" y="1005"/>
-      <point x="375" y="964" type="curve" name="iv03" smooth="yes"/>
+      <point x="375" y="964" type="curve" smooth="yes" name="iv03"/>
       <point x="336" y="1005"/>
       <point x="314" y="1061"/>
       <point x="314" y="1112" type="curve" smooth="yes"/>

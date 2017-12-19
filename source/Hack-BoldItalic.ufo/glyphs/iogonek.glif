@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <glyph name="iogonek" format="1">
   <advance width="1233"/>
   <unicode hex="012F"/>
@@ -16,7 +16,7 @@
       <point x="420.152" y="-134" type="curve" smooth="yes"/>
       <point x="445.959" y="-91.9445"/>
       <point x="488.985" y="-43.4939"/>
-      <point x="537.27" y="6.85563e-015" type="curve"/>
+      <point x="537.27" y="6.85563e-15" type="curve"/>
       <point x="20.1514" y="0" type="line"/>
       <point x="63.1514" y="225" type="line"/>
       <point x="428.151" y="225" type="line"/>
@@ -27,7 +27,7 @@
       <point x="721.151" y="225" type="line"/>
       <point x="1085.15" y="225" type="line"/>
       <point x="1042.15" y="0" type="line"/>
-      <point x="677.236" y="-8.91214e-017" type="line"/>
+      <point x="677.236" y="-8.91214e-17" type="line"/>
       <point x="629.211" y="-51.1691"/>
       <point x="594.957" y="-92.7668"/>
       <point x="579.152" y="-117" type="curve" smooth="yes"/>

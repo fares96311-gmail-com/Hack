@@ -11,7 +11,7 @@
       <point x="-753" y="1483" type="line" name="dh01"/>
       <point x="-753" y="1729" type="line" name="dv02"/>
       <point x="-479" y="1729" type="line"/>
-      <point x="-479" y="1483" type="line" name="dh02" smooth="yes"/>
+      <point x="-479" y="1483" type="line" smooth="yes" name="dh02"/>
       <point x="-479" y="1307"/>
       <point x="-570" y="1219"/>
       <point x="-753" y="1218" type="curve" name="dv01"/>

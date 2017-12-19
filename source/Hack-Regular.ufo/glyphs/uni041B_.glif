@@ -10,7 +10,7 @@
       <point x="280" y="516" type="curve" name="sh02"/>
       <point x="288" y="638"/>
       <point x="290" y="863"/>
-      <point x="290" y="1067" type="curve" name="sh01" smooth="yes"/>
+      <point x="290" y="1067" type="curve" smooth="yes" name="sh01"/>
       <point x="290" y="1493" type="line" name="at01"/>
       <point x="1104" y="1493" type="line"/>
       <point x="1104" y="0" type="line" name="sh03"/>
