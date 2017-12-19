@@ -1,10 +1,11 @@
 # BRUTALISM Hack
 
-[Hack](http://sourcefoundry.org/hack/) with slashed zero and slab "i". Downloads [here](build/ttf).
+[Hack](http://sourcefoundry.org/hack/) with the following modifications:
 
-![](img/brutalism-regular.png)
-![](img/brutalism-bold.png)
-![](img/brutalism-italic.png)
-![](img/brutalism-bolditalic.png)
+* slashed zero
+* slab "i"
+* wider bracket glyphs
 
-Also check out the [upstream README](https://github.com/source-foundry/Hack/blob/master/README.md).
+Downloads [here](build/ttf). Also check out the [upstream README](https://github.com/source-foundry/Hack/blob/master/README.md).
+
+![](img/brutalism-specimen.png)
